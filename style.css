@@ -27,7 +27,45 @@ body{
     transform-style: preserve-3d;
     transform: perspective(1000px);
     box-shadow: 0px 16px 24px 2px rgba(0,0,0,0.14) , 0px 6px 30px 5px rgba(0,0,0,0.12) , 0px 8px 10px -7px rgba(0,0,0,0.2) ;
+transition: 1s;
+}
 
+.card .imgBox{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    background: #000;
+    transition: 1s;
+    box-shadow: 0px 16px 24px 2px rgba(0,0,0,0.14) , 0px 6px 30px 5px rgba(0,0,0,0.12) , 0px 8px 10px -7px rgba(0,0,0,0.2) ;
+}
+
+.card:hover{
+    transform: translateX(50%);
+}
+
+.card .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    /* backface-visibility: hidden; */
+
+}
+
+
+.card .imgBox img:nth-child(2){
+    transform: rotateY(180deg);
+}
+
+
+.card:hover .imgBox{
+    transform: rotateY(-180deg);
 }
 
 
